@@ -1,4 +1,4 @@
-with open("./1st/celebration_value_input.txt", mode='r', encoding='utf-8') as input:
+with open("./1st/trebuchet_input.txt", mode='r', encoding='utf-8') as input:
     lines = input.read().splitlines()
 
 result = []
