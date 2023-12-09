@@ -2,7 +2,7 @@ import re
 from math import sqrt, floor, ceil, gcd, inf
 from collections import Counter
 
-with open("./9th/problem_input.txt", mode='r', encoding='utf-8') as input:
+with open("./9th/mirage_maintenance_input.txt", mode='r', encoding='utf-8') as input:
     lines = input.read().splitlines()
 
 histories = [[int(value) for value in line.split(" ")] for line in lines]
