@@ -2,7 +2,7 @@ import re
 from math import sqrt, floor, ceil, gcd, inf
 from collections import Counter
 
-with open("./10th/problem_input.txt", mode='r', encoding='utf-8') as input:
+with open("./10th/pipe_maze_input.txt", mode='r', encoding='utf-8') as input:
     lines = input.read().splitlines()
 
 NETWORK = [[[pipe, 0] for pipe in line] for line in lines]
