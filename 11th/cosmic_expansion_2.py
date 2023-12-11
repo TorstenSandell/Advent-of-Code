@@ -2,7 +2,7 @@ import re
 from math import sqrt, floor, ceil, gcd, inf
 from collections import Counter
 
-with open("./11th/problem_input.txt", mode='r', encoding='utf-8') as input:
+with open("./11th/cosmic_expansion_input.txt", mode='r', encoding='utf-8') as input:
     lines = input.read().splitlines()
 
 SPACE = [list(line) for line in lines]
