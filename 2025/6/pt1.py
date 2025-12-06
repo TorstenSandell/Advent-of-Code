@@ -1,8 +1,9 @@
 import pathlib
+from typing import List
 
 ########## Modifyables ##########
 
-use_test_input = True
+use_test_input = False
 debug = False
 splitchar = "\n"
 
@@ -21,4 +22,30 @@ with open(f"{path}/{input_file}", mode="r") as input:
 
 ########## Write code below ##########
 
-data = [d for d in raw_data]
+data = [d.split() for d in raw_data]
+
+class Problem:
+    def __init__(self, values: List[str], method):
+        self.values = [int(v) for v in values]
+        self.method = method
+
+problems: List[Problem] = [Problem(d[:-1], d[-1]) for d in map(list, zip(*data))]
+
+class Operators:
+    multiplication = "*"
+    addition = "+"
+
+def prod(numbers: List[int]):
+    result = 1
+    for value in numbers:
+        result *= value
+    return result
+
+def calculate(problem: Problem):
+    match problem.method:
+        case Operators.multiplication:
+            return prod(problem.values)
+        case Operators.addition:
+            return sum(problem.values)
+
+print(sum(pr(calculate(problem)) for problem in problems))
