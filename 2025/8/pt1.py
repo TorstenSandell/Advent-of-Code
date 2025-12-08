@@ -56,8 +56,6 @@ circuits: List[Set] = []
 for connection in ordered_data:
     if n_made_connections >= n_connections:
         break
-#    if any([connection.boxes <= circuit for circuit in circuits]):
- #       continue
 
     found_circuit = -1
     for i in range(len(circuits)):
