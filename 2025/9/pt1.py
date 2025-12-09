@@ -2,7 +2,7 @@ import pathlib
 
 ########## Modifyables ##########
 
-use_test_input = True
+use_test_input = False
 debug = False
 splitchar = "\n"
 
@@ -20,5 +20,5 @@ with open(f"{path}/{input_file}", mode="r") as input:
     raw_data = input.read().split(splitchar)
 
 ########## Write code below ##########
-
-data = [d for d in raw_data]
+red_tiles = [tuple(map(int, d.split(","))) for d in raw_data]
+print(max([(abs(first[0] - second[0]) + 1) * (abs(first[1] - second[1]) + 1) for first in red_tiles for second in red_tiles]))
